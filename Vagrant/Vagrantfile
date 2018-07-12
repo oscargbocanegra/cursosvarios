@@ -1,0 +1,77 @@
+# configuracion de variables
+GUI       = false  # Enable/Disable GUI
+RAM       = 512    # Default memory size in mb
+
+#Network configuration
+#DOMAIN    = ".nat.example.com"
+#NETWORK   = "192.168.33."
+#NETMASK   = "255.255.255.0"
+
+# Default Virtualbox .box
+BOX       = 'ubuntu/trusty64'
+
+#configuracion Equipos HOST
+#HOSTS = {
+#  "" => [],
+#  "" => [],
+#  "" => [],
+#}
+
+Vagrant.configure("2") do |config|
+  config.vm.box = BOX
+
+  #Servidor mongo primario
+  config.vm.define "mongoprimary" do |mongoprimary|
+    #mongoprimary.vm.box = BOX
+    mongoprimary.vm.network :forwarded_port, guest: 80, host: 8080
+    mongoprimary.vm.network "private_network", ip: "192.168.33.10"
+    mongoprimary.vm.hostname = "mongoprimary"
+    #Configuracion virtualvox
+    mongoprimary.vm.provider "virtualbox" do |vb|
+      vb.gui = GUI
+      vb.name = "mongoprimary"
+      vb.memory = RAM
+    end
+    #mongoprimary.vm.provision :shell, path: "mongo.sh"
+  end
+
+  #Servidor mongo Secundario
+  config.vm.define "mongosecundary" do |mongosecundary|
+    #mongoprimary.vm.box = BOX
+    mongosecundary.vm.network :forwarded_port, guest: 80, host: 8081
+    mongosecundary.vm.network "private_network", ip: "192.168.33.11"
+    mongosecundary.vm.hostname = "mongosecundary"
+    #Configuracion virtualvox
+    mongosecundary.vm.provider "virtualbox" do |vb|
+      vb.gui = GUI
+      vb.name = "mongosecundary"
+      vb.memory = RAM
+    end
+    #mongosecundary.vm.provision :shell, path: "mongo.sh"
+  end
+
+  #Servidor mongo Arbitro
+  config.vm.define "mongoarbiter" do |mongoarbiter|
+  #mongoprimary.vm.box = BOX
+    mongoarbiter.vm.network :forwarded_port, guest: 80, host: 8082
+    mongoarbiter.vm.network "private_network", ip: "192.168.33.12"
+    mongoarbiter.vm.hostname = "mongoarbiter"
+    #Configuracion virtualvox
+    mongoarbiter.vm.provider "virtualbox" do |vb|
+      vb.gui = GUI
+      vb.name = "mongoarbiter"
+      vb.memory = RAM
+    end
+    #mongoarbiter.vm.provision :shell, path: "mongo.sh"
+  end
+
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  # config.vm.network "public_network"
+  # config.vm.synced_folder "../data", "/vagrant_data"
+   #config.vm.provision "shell", inline: <<-SHELL
+   #  apt-get update
+   #  apt-get install -y apache2
+   #SHELL
+   #config.vm.synced_folder "/Applications/MAMP/htdocs/", "/htdocs_home"
+end
