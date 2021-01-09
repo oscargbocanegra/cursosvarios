@@ -1,8 +1,13 @@
-edad = 19
-
-if edad < 18:
-    print ("No puedes entrar")
+edad = 18
+if edad >19:
+    print ("Puedes entrar al bar")
 elif edad >= 21:
-    print ("Puedes entrar al bar y tambien puedes beber")
+    print("Tambien puedes beber")
 else:
-    print ("Puedes entrar al bar pero no puedes beber")
+    print("Puedes entrar pero no puedes beber")
+print("Finalizo la funcion")
+
+def pedirPizza():
+    print('Estas pidiendo pizza')
+
+pedirPizza()

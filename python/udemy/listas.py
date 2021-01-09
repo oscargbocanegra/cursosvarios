@@ -1,58 +1,34 @@
-lista1 = [1,2,3,4,5]
-print(lista1)
-
-print('lista con mas')
-lista1 + [5,6,7]
-print(lista1)
-
-print("lista con igual mas ")
-lista1 = lista1 + [5,6,7]
-print(lista1)
-
-print("lista por N ")
-lista1 * 3
-print(lista1)
-
-print("lista con append ")
-lista1.append(8)
-print(lista1)
-
-print("lista con string ")
-lista1.append('oscar')
-print(lista1)
-
-print("lista lista interna")
-lista1.append([9,8,7])
-print(lista1)
-
-print("lista extend")
-lista1.extend ([10,11])
-print(lista1)
-
-print("lista removiendo campo")
-lista1.remove (5)
-print(lista1)
-
-print("Imprimir lista campo a campo")
-lista1 = list ("oscar")
-print(lista1)
-
-print("Cadena de texto con split")
-lista1 = "oscar giovanni bocanegra"
+#estoEsUnaListaNumerica = [1,2,3,4,5]
+#print(estoEsUnaListaNumerica)
+#estoEsUnaListaNumerica = estoEsUnaListaNumerica + [6,7]
+#print(estoEsUnaListaNumerica)
+#estoEsUnaListaNumerica += [8,9]
+#print(estoEsUnaListaNumerica)
+#estoEsUnaListaNumerica.append(10)
+#print(estoEsUnaListaNumerica)
+#estoEsUnaListaNumerica.extend([11,12,13])
+#print(estoEsUnaListaNumerica)
+#estoEsUnaListaNumerica.remove(10)
+#print(estoEsUnaListaNumerica)
+#lista = list("oscar giovanni")
+#print(lista)
+lista_comida = "lasagna, spaguetti, pizza"
+lista_comida2 = "lasagna", "spaguetti", "pizza"
+lista1 = "oscar giovanni"
 lista1.split()
-print(lista1)
+#print(lista1)
+#print(lista_comida2)
+#",".join(lista_comida2)
+alfabeto = "abcdefghijklmnñopqrstuvwxyz"
+print(alfabeto)
+alfabeto_lista = list(alfabeto)
+#print(alfabeto_lista)
+#print(alfabeto_lista.index(""))
+#print(alfabeto.index("hi"))
+#print(alfabeto_lista[7])
+#print(alfabeto_lista[-1])
 
-print("Metodo spit con delimitador coma")
-comida_favorita = "lasagna, spagueti, pizza"
-print(comida_favorita)
-comida_favorita.split(",")
-print(comida_favorita)
-
-print("Metodo Join ")
-comida_favorita2 = ['lasagna', 'spagueti', 'pizza']
-print(comida_favorita2)
-r = "-".join(comida_favorita2)
-print(r)
-
-
+print(alfabeto_lista)
+alfabeto_lista = ", ".join(alfabeto_lista).replace(",","")
+print(alfabeto_lista)
 

@@ -1,9 +1,0 @@
-{
-  "personas" : [
-    {"nombre": "Jesus", "apellido": "crisontomo", "edad": 25, "nickname": "oscar"},
-    {"nombre": "maria", "apellido": "crisontomo"},
-    {"nombre": "luis", "apellido": "crisontomo"},
-    {"nombre": "david", "apellido": "crisontomo"},
-    {"nombre": "david", "apellido": "Bocanegra"}
-  ]
-}
