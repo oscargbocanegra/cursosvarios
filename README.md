@@ -7,8 +7,11 @@
 
 ---
 ## Python.
+---
 
-* Programa mayoria de edad
+
+* `mayor_edad.py` Programa que valida la mayoria de edad usando `input` para ingresar informacion por teclado y `int` para convertir el dato a entero.
+* 
 * 
 
 ---
