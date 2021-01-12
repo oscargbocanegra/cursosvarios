@@ -240,6 +240,7 @@ Función que permite imprimir por pantalla el dato que se asigna como argumento 
 ___
   Author - Oscar G Bocanegra.<br>
   https://www.linkedin.com/in/oscarbocanegra/
+  <br>
   Fuentes de información.
   * Cursos de [OpenWebinars](https://openwebinars.net/).
   * Cursos de Platzi [Platzi](http://platzi.com/)
