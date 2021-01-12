@@ -234,7 +234,8 @@ ___
     ```
 ___
 # Ejercicios.
-
+- Todos los ejemplos se encuentran en la carpeta `examples`.
+  - 
 
 ___
 # Creditos.
