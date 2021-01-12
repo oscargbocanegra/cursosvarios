@@ -29,6 +29,7 @@ ___
     - [round(x,[y])](#roundxy)
     - [input()](#input)
     - [print()](#print)
+- [Ejercicios.](#ejercicios)
 - [Creditos.](#creditos)
 ___
 # Python.
@@ -231,6 +232,9 @@ ___
       >>> print("%d %f %s" % (2.5,2.5,2.5))
       2 2.500000 2.5
     ```
+___
+# Ejercicios.
+
 
 ___
 # Creditos.
